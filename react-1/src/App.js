@@ -1,11 +1,18 @@
-import Message from './StateEx/Message'
-import Counter from './StateEx/Counter'
-function App() {
-    return <div>
-        <h1>App Component</h1>
-        <hr />
-        <Counter />
+import React from 'react'
+import Message from './Message/Message'
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
+const App = () => {
+    return (
+        <div>
+            <Provider store={store}>
+                <h1>App Component</h1>
+                <hr />
+                <Message />
+            </Provider>
 
-    </div>
+        </div>
+    )
 }
+
 export default App
